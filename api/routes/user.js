@@ -10,7 +10,6 @@ const User = require('../models/User')
 
 
 // Sign up
-
 router.post('/signup', [
   check('name', 'Name is required').not().isEmpty(),
   check('email', 'Email is required').not().isEmpty(),
@@ -75,9 +74,7 @@ router.post('/signup', [
 ])
 
 
-
 // Getting users info
-
 router.get('/user', auth, async (req, res) => {
   try {
     const user = await User.findById(req.user._id).select('-password')
@@ -95,9 +92,7 @@ router.get('/user', auth, async (req, res) => {
 })
 
 
-
 // Delete user
-
 router.delete('/:userId', (req, res, next) => {
   User.deleteOne({ _id: req.params.userId })
   .exec()

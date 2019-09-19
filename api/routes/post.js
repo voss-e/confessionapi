@@ -38,7 +38,6 @@ router.post('/', [auth, [
 })
 
 
-
 // Get all posts
 router.get('/', auth, async (req, res) => {
   try {
@@ -49,7 +48,6 @@ router.get('/', auth, async (req, res) => {
     res.status(500).send('Server Error')
   }
 })
-
 
 
 // Get a certain post
@@ -69,7 +67,6 @@ router.get('/:id', auth, async (req, res) => {
     res.status(500).send('Server Error')
   }
 })
-
 
 
 // Delete a certain post
@@ -97,7 +94,6 @@ router.delete('/:id', auth, async (req, res) => {
 })
 
 
-
 // Like a certain post ( Just update the like object..)
 router.put('/like/:id', auth, async (req, res) => {
   try {
@@ -119,7 +115,6 @@ router.put('/like/:id', auth, async (req, res) => {
     res.status(500).json({ msg: 'Server Error' })
   }
 })
-
 
 
 // Unlike a certain post ( Just remove the like, you can't really unlike ( downvote) something )
@@ -145,7 +140,6 @@ router.put('/unlike/:id', auth, async (req, res) => {
     res.status(500).json({ msg: 'Server Error' })
   }
 })
-
 
 
 // Create a comment on a certain post
@@ -181,7 +175,6 @@ router.post('/comment/:id', [auth, [
     res.status(500).json({ msg: 'Server Error' })
   }
 })
-
 
 
 // Delete a certain comment

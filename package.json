@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "engines": {
     "node": "11.6.0"
-  }
+  },
   "description": "REST API",
   "main": "app.js",
   "scripts": {

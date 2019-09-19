@@ -1,8 +1,11 @@
 {
   "name": "confessionapi",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "engines": {
+    "node": "11.6.0"
+  }
+  "description": "REST API",
+  "main": "app.js",
   "scripts": {
     "run": "nodemon app",
     "start": "nodemon app"

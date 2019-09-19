@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "run": "nodemon app"
+    "run": "nodemon app",
+    "start": "nodemon app"
   },
   "author": "voss-e",
   "license": "ISC",

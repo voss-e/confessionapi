@@ -1,4 +1,4 @@
-const express = require('express')
+ const express = require('express')
 const router = express.Router()
 const auth = require('../middleware/auth')
 const { check, validationResult } = require('express-validator')
@@ -117,7 +117,7 @@ router.put('/like/:id', auth, async (req, res) => {
 })
 
 
-// Unlike a certain post ( Just remove the like, you can't really unlike ( downvote) something )
+// Unlike a certain post ( Just remove the like, you can't really unlike ( downvote ) something )
 router.put('/unlike/:id', auth, async (req, res) => {
   try {
     const post = await Post.findById(req.params.id)
